@@ -1,0 +1,172 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* caso haja uma ul colocar aqui ul{list-style: none; */
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1600673645627-1c47394132ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    margin-top: 32px;
+    height: calc(100px + 32px);
+}
+
+header div {
+    width: 500px;
+    margin: auto;
+
+    padding: 4px;
+
+    transition: transform .3s;
+
+    color: white
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* MAIN */
+main {
+    max-width: 580px;
+    width: 90%;
+
+    margin: 32px auto;
+
+    gap: 24px;
+}
+
+/* SECTION */
+section {
+    color: white;
+    text-align: center;
+
+    background-image: linear-gradient(#5D69BE, #C89FEB);
+
+    border-radius: 20px;
+
+    padding-top: 4px;
+}
+
+section div {
+    background-color: #2A2534;
+    padding: 32px;
+    padding-top: 24px;
+
+    border-radius: 18px;
+}
+
+section h2 {
+    letter-spacing: -0.47;
+}
+
+section p {
+    letter-spacing: -0.18;
+    color: white;
+}
+
+/* caso haja alguma ul, colocar aqui */
+
+/* FOOTER */
+footer {
+    max-width: 97.5px;
+
+    margin: 32px auto;
+}
+
+/* BUTTON */
+button {
+    width: 150px;
+    height: 60px;
+
+    background: purple;
+    border: 2px solid rgb(182, 3, 182);
+
+    border-radius: 10px;
+
+    color: white;
+    text-align: center;
+    font-size: 16px;
+
+    position: fixed;
+    bottom: 10px;
+    right: 300px;
+
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c00b9;
+}
+
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* ANIMATION */
+header div {
+    animation: fromtop .7s .2s
+    backwards;
+}
+
+main section {
+    animation: frombottom .7s .5s 
+    backwards;
+}
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translateY(30);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
